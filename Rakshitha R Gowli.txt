@@ -1,0 +1,199 @@
+In class having same method main and different parameter.
+
+ex: class Company{
+        
+     static void employee(){
+         System.out.println("invoking no arg in employee");
+       
+     static void employee(String companyName){
+             System.out.println("Company Name:"+companyName);
+    }
+  
+     static void employee(String companyName,int noOfPeople){
+                 System.out.println("Company Name:"+companyName);
+                 System.out.println("No of people:"+noOfPeople);
+     }
+
+      static void employee(String companyName,int noOfPeople,String location){
+                 System.out.println("Company Name:"+companyName);
+                 System.out.println("No of people:"+noOfPeople);
+                 System.out.println("location:"+location);
+     }
+
+   
+public static void main(String[] args);
+{
+    System.out.println("invoking main in company");
+    employee();
+    employee("HCL");
+    employee("HCL",190);
+    employee("HCL",190,"DVG");
+}
+}
+
+2. they are 4 kinds of variables
+      1. local variable: variable declared inside the method.
+          ex:
+                    class Company{
+                            static void employee(){
+                              String  companyName="HCL";
+                               int  noOfPeople=250;
+                    } 
+
+
+      2.instances variable: variable declared outside the method and inside the class.
+                    ex:
+                    class Company{
+                              String  companyName;
+                              int  noOfPeople;
+                           Company(){
+                                this.companyName="HCL";  
+                                this.noOfPeople=250;
+                    } 
+
+     3. parameter variable:variable declared inside the parathesis.
+                       ex:     class Company{
+                            static void employee(String companyName,int noOfPeople){
+                                companyName="HCL";
+                                noOfPeople=250;
+                    } 
+
+     4. static variable:variable declared using static keyword.
+               ex:  class Company{
+                            static String companyName;
+                             static int  noOfPeople;
+
+                             static{
+        
+                            companyName="HCL";
+                                noOfPeople=250; 
+                    } 
+                  }  
+     
+ 4.   class Company{
+              
+            Company(){
+                    System.out.println("invoking no arg in employee");
+              }
+
+            Company(String companyName){
+                    System.out.println("Company Name:"+companyName);
+              }
+
+            Company(String companyName,int noOfPeople){
+                 System.out.println("Company Name:"+companyName);
+                 System.out.println("No of people:"+noOfPeople);
+             }
+             
+             Company(String companyName,int noOfPeople,String location){
+                 System.out.println("Company Name:"+companyName);
+                 System.out.println("No of people:"+noOfPeople);
+                 System.out.println("location:"+location);
+             }
+
+        public static void main(String[] args);
+    {
+         System.out.println("invoking main in company");
+
+         Company company=new Company();   
+         Company company1=new Company("HCL"); 
+         Company company2=new Company("HCL",250);
+         Company company=new Company("HCL",250,"DVG");
+    }
+  }
+
+
+6.      class Company{
+            static String companyName;
+            static int noOfPeople;
+
+              static void employee(String companyName,int noOfPeople){
+                      companyName="HCL";
+                      noOfPeople=250;
+                  }
+
+       public static void main(String[] args);
+      {   
+           System.out.println("invoking main in company");
+           static employee();
+            System.out.println("Company Name:"+companyName);
+            System.out.println("No of people:"+noOfPeople);
+}
+}
+ 
+7.    class Company{
+              
+            Company(){
+                    System.out.println("invoking no arg in employee");
+              }
+
+            Company(String companyName){
+                    this.companyName=companyName;
+                    System.out.println("companyName:"+companyName);
+              }
+
+            Company(String companyName,int noOfPeople){
+                 this(companyName);
+                 this.noOfPeople=noOFPeople;
+                 System.out.println("No of people:"+noOfPeople);
+             }
+             
+             Company(String companyName,int noOfPeople,String location){
+                 this(companyName,noOfPeople);
+                 this.location=location;
+                 System.out.println("location:"+location);
+             }
+
+        public static void main(String[] args);
+    {
+        System.out.println("invoking main in company");
+        Company company=new Company();
+        Company company1=new Company("HCL");
+        Company company2=new Company("HCL",250);
+        Company company=new Company("HCL",250,"DVG");
+    }
+  }
+
+
+5.       class Company{
+               String companyName;
+               int noOfPeople;
+               
+          public void employee(){
+           System.out.println("invoking no arg in employee");
+    }
+       
+          public void employee(String companyName){
+             System.out.println("Company Name:"+companyName);
+    }
+  
+           public void employee(String companyName,int noOfPeople){
+                 System.out.println("Company Name:"+companyName);
+                 System.out.println("No of people:"+noOfPeople);
+     }
+
+           public void employee(String companyName,int noOfPeople,String location){
+                 System.out.println("Company Name:"+companyName);
+                 System.out.println("No of people:"+noOfPeople);
+                 System.out.println("location:"+location);
+     }
+ 
+              
+
+       public static void main(String[] args);
+      {   
+         System.out.println("invoking main in company");
+           employee();
+           employee("HCL");
+           employee("HCL",190);
+           employee("HCL",190,"DVG"); 
+}
+}
+
+
+3. Heap is a primary memory.
+ 
+
+           
+              
+           
